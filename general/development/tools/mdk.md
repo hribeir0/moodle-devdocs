@@ -237,6 +237,8 @@ You may need to set the path variable to null:
 mdk config set path ""
 ```
 
+During the installation, a `.moodle-sdk` folder will be created. A `config.json` file will be placed inside it, and you can edit this file to change your settings easily.
+
 :::
 
 ## Upgrading MDK
