@@ -528,21 +528,14 @@ Templates can be overridden by a theme.
 1. Copy the `ratingui.mustache` file into the newly created `theme/timtam/templates/mod_wiki` and edit it.
 You should see your changes immediately if theme designer mode is on. Templates are cached just like CSS, so if you are not using theme designer mode you will need to purge all caches to see the latest version of an edited template. If the template you are overriding contains a documentation comment it is recommended to remove it. It will still show the documentation in the template library.
 
-### Paths for overriding templates
+### Examples
 
-#### Overriding a template from another plugin
-
-If you want to override `theme/boost/templates/navbar.mustache`, you should copy and modify it, then **save the new version at** `theme/mytheme/templates/theme_boost/navbar.mustache`.
-
-This principle applies to other plugins. For example, to override the template at `blocks/myoverview/templates/view-summary.mustache` you would place your own at `theme/mytheme/templates/block_myoverview/view-summary.mustache`.
-
-#### Overriding a template from lib/
-
-To override a core template, like, `lib/templates/notification_success.mustache:` you should have your own copy at `theme/mytheme/templates/core/notification_success.mustache`.
-
-#### Overriding a core subsystem template
-
-To override a core subsystem template, for example, `message/templates/message_preferences.mustache` place your template at `theme/mytheme/templates/core_message/message_preferences.mustache`.
+| Path for original template | Component | Theme override path |
+| --- | --- | --- |
+| `public/blocks/myoverview/templates/view-summary.mustache` | `block_myoverview` | `public/theme/mytheme/templates/block_myoverview/view-summary.mustache` |
+| `public/group/templates/group_details.mustache` | `core_group` | `public/theme/mytheme/templates/core_group/group_details.mustache` |
+| `public/lib/templates/modal.mustache` | `core` | `public/theme/mytheme/templates/core/modal.mustache` |
+| `public/theme/boost/templates/navbar.mustache` | `theme_boost` | `public/theme/mytheme/templates/theme_boost/navbar.mustache` |
 
 ## Documenting the templates
 
